@@ -264,7 +264,7 @@ while run:
 			draw_text('Selamat, Kamu Menang!!', font, text_col, 240, screen_height // 2 + 50)
 			draw_text('Klik untuk memulai kembali', font, text_col, 100, screen_height // 2 + 100)
 		elif game_over == -1:
-			draw_text('Kamu Kalah, cupu', font, text_col, 180, screen_height // 2 + 50)
+			draw_text('Kamu Kalah...', font, text_col, 180, screen_height // 2 + 50)
 			draw_text('Klik untuk memulai kembali', font, text_col, 100, screen_height // 2 + 100)
 
 
