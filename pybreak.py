@@ -264,19 +264,18 @@ while run:
 			draw_text('Selamat, Kamu Menang!!', font, text_col, 240, screen_height // 2 + 50)
 			draw_text('Klik untuk memulai kembali', font, text_col, 100, screen_height // 2 + 100)
 		elif game_over == -1:
-			draw_text('Kamu Kalah...', font, text_col, 180, screen_height // 2 + 50)
+			draw_text('Kamu Kalah... ', font, text_col, 180, screen_height // 2 + 50)
 			draw_text('Klik untuk memulai kembali', font, text_col, 100, screen_height // 2 + 100)
 
 
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			run = False
-		if event.type == pygame.MOUSEBUTTONDOWN and live_ball == False:
+		if event.type == pygame.KEYDOWN and live_ball == False or event.type == pygame.MOUSEBUTTONDOWN and live_ball == False :
 			live_ball = True
 			ball.reset(player_paddle.x + (player_paddle.width // 2), player_paddle.y - player_paddle.height)
 			player_paddle.reset()
 			wall.create_wall()
-
 
 
 	pygame.display.update()
